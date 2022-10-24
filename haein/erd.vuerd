@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -528.0000000000018,
-    "scrollLeft": -92.66666666666629,
-    "zoomLevel": 0.9,
+    "scrollTop": -636.6666666666689,
+    "scrollLeft": -612.6666666666664,
+    "zoomLevel": 0.4,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -168,7 +168,7 @@
       },
       {
         "name": "QUESTION_ANSWER",
-        "comment": "설문 문항 답변",
+        "comment": "설문 답항 답변",
         "columns": [
           {
             "name": "USER_UID",
@@ -267,7 +267,7 @@
           "active": false,
           "left": 102.9441,
           "top": 520.8476,
-          "zIndex": 595,
+          "zIndex": 608,
           "widthName": 123.56396484375,
           "widthComment": 89.140625
         },
@@ -650,7 +650,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -669,7 +669,7 @@
           "active": false,
           "left": 1265.093,
           "top": 672.3896,
-          "zIndex": 583,
+          "zIndex": 614,
           "widthName": 160.02490234375,
           "widthComment": 120
         },
@@ -1159,13 +1159,36 @@
               "widthDefault": 60
             },
             "id": "a7468f08-48ac-4481-9d8c-06874d5fce55"
+          },
+          {
+            "name": "",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5a0d4596-c7af-46ae-81c2-4947168e872c"
           }
         ],
         "ui": {
           "active": false,
           "left": 104.0196,
           "top": 1033.7628,
-          "zIndex": 506,
+          "zIndex": 609,
           "widthName": 72.484375,
           "widthComment": 60
         },
@@ -1216,7 +1239,7 @@
             "6c999533-bdf3-4017-8012-ecd329c14841"
           ],
           "x": 557.87165078125,
-          "y": 1088.7628,
+          "y": 1099.0128,
           "direction": "right"
         },
         "end": {
