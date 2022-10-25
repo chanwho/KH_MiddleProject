@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -277.60000000000014,
-    "scrollLeft": -708.7999999999992,
+    "scrollTop": -280.00000000000006,
+    "scrollLeft": -128.00937500000006,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -95,9 +95,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 4.7444,
-          "top": 697.9085,
-          "zIndex": 3,
+          "left": 5.7444,
+          "top": 694.9085,
+          "zIndex": 11,
           "widthName": 65.41943359375,
           "widthComment": 60
         },
@@ -179,10 +179,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 835.1246,
-          "top": 680.877,
-          "zIndex": 10,
+          "top": 681.877,
+          "zIndex": 20,
           "widthName": 60,
           "widthComment": 60
         },
@@ -513,8 +513,8 @@
           "columnIds": [
             "5cae28cd-86aa-4e8f-951e-9c876f9cc903"
           ],
-          "x": 451.531509375,
-          "y": 725.4085,
+          "x": 452.531509375,
+          "y": 722.4085,
           "direction": "right"
         },
         "end": {
@@ -540,7 +540,7 @@
             "e8892a81-f9b6-47cc-a99c-8f16f27f0425"
           ],
           "x": 835.1246,
-          "y": 713.502,
+          "y": 714.502,
           "direction": "left"
         },
         "end": {
@@ -565,8 +565,8 @@
           "columnIds": [
             "5cae28cd-86aa-4e8f-951e-9c876f9cc903"
           ],
-          "x": 451.531509375,
-          "y": 780.4085,
+          "x": 452.531509375,
+          "y": 777.4085,
           "direction": "right"
         },
         "end": {
@@ -575,7 +575,7 @@
             "926b3dbb-f103-4e4d-b565-13a5e1a9e0c6"
           ],
           "x": 835.1246,
-          "y": 778.752,
+          "y": 779.752,
           "direction": "left"
         },
         "constraintName": "fk_question_to_answer_list",
