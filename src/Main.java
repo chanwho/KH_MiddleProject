@@ -1,7 +1,17 @@
 public class Main{
     public static void main(String[] args) {
         Start start = new Start();
-        start.startFunction();
-        // System.out.println("hi");
+
+        while(true){
+
+            // 로그인화면
+
+            start.startFunction();
+            // System.out.println("hi");
+
+            // 종료화면
+
+        }
+
     }
 }
