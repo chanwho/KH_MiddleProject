@@ -10,7 +10,7 @@ public class Start {
             String StartCommend = sc.next();
 
             if (StartCommend == "P" || StartCommend == "p"){
-                // 설문시작으로 넘어감
+                // 설문조사로 넘어감
             }
             if (StartCommend == "S" || StartCommend == "s"){
                 // 통계로 넘어감
