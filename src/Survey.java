@@ -1,3 +1,5 @@
-public class survey {
-    
+public class Survey {
+    public void SurveyFunction(){
+        
+    }
 }
