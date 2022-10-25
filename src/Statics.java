@@ -1,3 +1,4 @@
-public class Static {
-    
+
+public class Statics {
+
 }
