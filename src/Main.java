@@ -15,15 +15,14 @@ public class Main{
             while(true){
                 
                 // 로그인화면
-                
                 // Start start = new Start();
                 // start.startFunction();
-                Survey survey = new Survey();
-                survey.SurveyFunction(statement);
-                break;
-                // Statics statics = new Statics();
-                // statics.StaticsFunction(statement);
-    
+                // Survey survey = new Survey();
+                // survey.SurveyFunction(statement);
+                // break;
+                Statics statics = new Statics();
+                statics.StaticsFunction(statement);
+                return;
                 // 종료화면
             }
             } catch (SQLException e) {
