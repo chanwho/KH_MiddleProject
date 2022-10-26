@@ -10,6 +10,8 @@ public class LogIn {
         String query = "";
         ResultSet resultSet;
         String user_uid = "";
+        String user_id = "";
+        String user_author = "";
 
         System.out.println(
                 "------------------------------------------------------------------------------------------------------------------------");
@@ -39,13 +41,21 @@ public class LogIn {
                 }
             } while (!resultSet.isBeforeFirst());
 
-            // 아이디, 비밀번호 모두 일치하는 경우 로그인
+            // 아이디, 비밀번호 모두 일치하는 경우 아이디, 권한 출력하며 로그인
+
             while (resultSet.next()) {
                 user_uid = resultSet.getString("USER_UID");
-                String user_id = resultSet.getString("ID");
-                String user_author = resultSet.getString("AUTHOR_UID");
-                System.out.println(user_id + "님 " + user_author + " 권한으로 로그인합니다.");
+                user_id = resultSet.getString("ID");
             }
+            query = "SELECT author.AUTHOR FROM user INNER JOIN author ON user.AUTHOR_UID = author.AUTHOR_UID AND USER_UID = '" + user_uid + "';";
+            resultSet = statement.executeQuery(query);
+            
+            while (resultSet.next()) {
+                user_author = resultSet.getString("AUTHOR");
+            }
+            
+            System.out.println(user_id + "님 " + user_author + " 권한으로 로그인합니다.");
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
