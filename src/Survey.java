@@ -4,7 +4,8 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class Survey {
-    public void SurveyFunction(Statement statement, String user_number){
+    public void SurveyFunction(Statement statement, String Main_user_number){
+        String user_number = Main_user_number;
         String query_question1 = "select question.QUESTION from question where question.QUESTION_UID = 'QS01';";
         String query_answer1 = "select * from answer inner join question ON question.QUESTION_UID = ANSWER.question_uid where question.QUESTION_UID = 'QS01';";
         String query_question2 = "select question.QUESTION from question where question.QUESTION_UID = 'QS02';";
@@ -20,7 +21,6 @@ public class Survey {
         ResultSet resultSet;
         try {
             // 1번
-            user_number = "MB01";
             resultSet = statement.executeQuery(query_question1);
             while(resultSet.next()){
                 String QUESTION = resultSet.getString("QUESTION");
