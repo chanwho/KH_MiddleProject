@@ -20,6 +20,7 @@ public class Survey {
         ResultSet resultSet;
         try {
             // 1번
+            user_number = "MB01";
             resultSet = statement.executeQuery(query_question1);
             while(resultSet.next()){
                 String QUESTION = resultSet.getString("QUESTION");
@@ -97,8 +98,10 @@ public class Survey {
             String answerInsert5 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS05','AS0"+ answer5 +"');";
             statement.execute(answerInsert5);
 
-            System.out.println("설문 종료");
+            System.out.println("--------------설문 종료--------------");
             sc.close();
+            Start start = new Start();
+            start.startFunction();
 
         } catch (SQLException e) {
             e.printStackTrace();

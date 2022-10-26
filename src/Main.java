@@ -12,19 +12,21 @@ public class Main{
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
             Statement statement = connection.createStatement();
+            // Start start = new Start();
+            Survey survey = new Survey();
+            // Statics statics = new Statics();
+            End end = new End();
+
+
             while(true){
-                
+                String user_number = "";
                 // 로그인화면
                 
-                // Start start = new Start();
                 // start.startFunction();
-                Survey survey = new Survey();
-                survey.SurveyFunction(statement);
-                break;
-                // Statics statics = new Statics();
+                survey.SurveyFunction(statement, user_number);          // 설문화면
                 // statics.StaticsFunction(statement);
-    
-                // 종료화면
+                end.EndFunction();                                      // 종료화면
+                break;
             }
             } catch (SQLException e) {
             e.printStackTrace();
