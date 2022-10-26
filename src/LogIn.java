@@ -9,7 +9,7 @@ public class LogIn {
         String PW = "";
         String query = "";
         ResultSet resultSet;
-        String user_number = "";
+        String user_uid = "";
 
         System.out.println(
                 "------------------------------------------------------------------------------------------------------------------------");
@@ -17,19 +17,20 @@ public class LogIn {
         System.out.println(
                 "------------------------------------------------------------------------------------------------------------------------");
 
-        // 아이디와 비밀번호 받기
-        try {
-            do {
+                try {
+                    do {
+                // 아이디와 비밀번호 받기
                 ID = sc.nextLine();
                 PW = sc.nextLine();
 
-                // 아이디와 비밀번호 비교
+                // 아이디 비교
                 query = "SELECT * FROM user WHERE ID = '" + ID + "';";
                 resultSet = statement.executeQuery(query);
 
                 if (!resultSet.isBeforeFirst()) {
                     System.out.println("일치하는 아이디가 없습니다. \n아이디와 비밀번호를 입력해주세요.");
                 } else {
+                    // 아이디가 있는 경우, 아이디와 비밀번호가 일치하는지 확인
                     query = "SELECT * FROM user WHERE ID = '" + ID + "' AND PW = '" + PW + "'";
                     resultSet = statement.executeQuery(query);
                     if (!resultSet.isBeforeFirst()) {
@@ -37,22 +38,18 @@ public class LogIn {
                     } 
                 }
             } while (!resultSet.isBeforeFirst());
-            
+
+            // 아이디, 비밀번호 모두 일치하는 경우 로그인
             while (resultSet.next()) {
-                String user_uid = resultSet.getString("USER_UID");
+                user_uid = resultSet.getString("USER_UID");
                 String user_id = resultSet.getString("ID");
                 String user_author = resultSet.getString("AUTHOR_UID");
                 System.out.println(user_id + "님 " + user_author + " 권한으로 로그인합니다.");
-                user_number = user_uid;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return user_number;
+        return user_uid;
     }
-
-    // 일치하면 유저 이름 및 권한 출력
-    // 불일치시 재 로그인 요청(반복)
-
 }
