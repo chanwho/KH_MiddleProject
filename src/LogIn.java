@@ -59,7 +59,6 @@ public class LogIn {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        sc.close();
         return user_uid;
     }
 
