@@ -7,8 +7,8 @@ public class Start {
             System.out.println("---------------------------------------------------------");
             System.out.println("P.설문시작 | S.통계 | Q.종료");
             System.out.println("---------------------------------------------------------");
+            System.out.println("선택 : ");
             String StartCommend = sc.next();
-
             if (StartCommend == "P" || StartCommend == "p"){
                 // 설문조사로 넘어감
             }
@@ -17,6 +17,7 @@ public class Start {
             }
             if (StartCommend == "Q" || StartCommend == "q"){
                 // 종료화면으로 넘어감
+                System.out.println("종료합니다");
             }
         
     }
