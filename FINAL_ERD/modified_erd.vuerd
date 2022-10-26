@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -354.00000000000006,
-    "scrollLeft": -167.0093750000001,
+    "scrollTop": -154.00000000000006,
+    "scrollLeft": -630.0093750000001,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -97,7 +97,7 @@
           "active": false,
           "left": 5.7444,
           "top": 694.9085,
-          "zIndex": 4,
+          "zIndex": 3,
           "widthName": 65.41943359375,
           "widthComment": 60
         },
@@ -180,9 +180,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 832.6246,
-          "top": 686.877,
-          "zIndex": 17,
+          "left": 825.1246,
+          "top": 678.127,
+          "zIndex": 25,
           "widthName": 60,
           "widthComment": 60
         },
@@ -267,7 +267,7 @@
           "active": false,
           "left": 553.3016,
           "top": 424.0649,
-          "zIndex": 16,
+          "zIndex": 24,
           "widthName": 123.56396484375,
           "widthComment": 89.140625
         },
@@ -375,7 +375,7 @@
           "active": false,
           "left": 570.9758,
           "top": 138.4046,
-          "zIndex": 1,
+          "zIndex": 26,
           "widthName": 60,
           "widthComment": 60
         },
@@ -434,10 +434,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 1107.3805,
           "top": 158.7918,
-          "zIndex": 2,
+          "zIndex": 27,
           "widthName": 60,
           "widthComment": 60
         },
@@ -539,8 +539,8 @@
           "columnIds": [
             "e8892a81-f9b6-47cc-a99c-8f16f27f0425"
           ],
-          "x": 832.6246,
-          "y": 719.502,
+          "x": 825.1246,
+          "y": 710.752,
           "direction": "left"
         },
         "end": {
@@ -574,8 +574,8 @@
           "columnIds": [
             "926b3dbb-f103-4e4d-b565-13a5e1a9e0c6"
           ],
-          "x": 832.6246,
-          "y": 784.752,
+          "x": 825.1246,
+          "y": 776.002,
           "direction": "left"
         },
         "constraintName": "fk_question_to_answer_list",

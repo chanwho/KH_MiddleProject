@@ -23,9 +23,9 @@ public class Main{
                 Survey survey = new Survey();
                 survey.SurveyFunction(statement, Main_user_number);
                 // break;
-                // Statics statics = new Statics();
-                // statics.StaticsFunction(statement);
-    
+                Statics statics = new Statics();
+                statics.StaticsFunction(statement);
+                return;
                 // 종료화면
             // }
             } catch (SQLException e) {
