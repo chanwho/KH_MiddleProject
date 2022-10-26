@@ -12,7 +12,7 @@ public class Main{
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
             Statement statement = connection.createStatement();
-            while(true){
+            //while(true){
                 
                 // 로그인화면
                 // Start start = new Start();
@@ -24,7 +24,7 @@ public class Main{
                 statics.StaticsFunction(statement);
                 return;
                 // 종료화면
-            }
+            //}
             } catch (SQLException e) {
             e.printStackTrace();
         }
