@@ -21,4 +21,8 @@ public class Statics {
 
 
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2ac53b0763761ca477d29b0bbc898653e07e6770
 }
