@@ -13,7 +13,6 @@ public class Main{
             Connection connection = DriverManager.getConnection(url, user, password);
             Statement statement = connection.createStatement();
             // while(true){
-                
                 // 로그인화면
                 LogIn login = new LogIn();
                 String Main_user_number = login.LoginFunction(statement);
