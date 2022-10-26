@@ -4,11 +4,12 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class Statics {
-public void StaticsFunction(Statement statement){
+public void StaticsFunction(Statement statement, String user_number){
         Scanner input = new Scanner(System.in);
         // 로그인한 사람의 USER_UID로 AUTHOR_UID 확인
-        String query = "SELECT USER.ID, AUTHOR.AUTHOR FROM AUTHOR INNER JOIN USER ON USER.AUTHOR_UID = AUTHOR.AUTHOR_UID AND USER.USER_UID = 'MB01'";
+        String query = "SELECT USER.ID, AUTHOR.AUTHOR FROM AUTHOR INNER JOIN USER ON USER.AUTHOR_UID = AUTHOR.AUTHOR_UID AND USER.USER_UID = '"+user_number+"'";
         // 설문자 최대 5명으로 제한
+        
         String query1 = "SELECT ANSWER.ANSWER_UID, ANSWER.ANSWER FROM QUESTION_ANSWER RIGHT JOIN ANSWER ON QUESTION_ANSWER.ANSWER_UID = ANSWER.ANSWER_UID WHERE QUESTION_ANSWER.USER_UID = 'MB01'";
         String query2 = "SELECT ANSWER.ANSWER_UID, ANSWER.ANSWER FROM QUESTION_ANSWER RIGHT JOIN ANSWER ON QUESTION_ANSWER.ANSWER_UID = ANSWER.ANSWER_UID WHERE QUESTION_ANSWER.USER_UID = 'MB02'";
         String query3 = "SELECT ANSWER.ANSWER_UID, ANSWER.ANSWER FROM QUESTION_ANSWER RIGHT JOIN ANSWER ON QUESTION_ANSWER.ANSWER_UID = ANSWER.ANSWER_UID WHERE QUESTION_ANSWER.USER_UID = 'MB03'";
@@ -37,11 +38,22 @@ public void StaticsFunction(Statement statement){
                 System.out.println(id+"회원님 통계조회 화면입니다.");
                 System.out.println("회원님이 참여하신 설문을 조회합니다.\n"+
                 "     질문(1)         질문(2)            질문(3)           질문(4)           질문(5)");
-                resultSet = statement.executeQuery(query1);
-                while(resultSet.next()){
-                        String C0 = resultSet.getString("ANSWER.ANSWER");
-                        System.out.print(C0+"    ");
+                switch(user_number){
+                        case "MB02" : resultSet = statement.executeQuery(query2);
+                        break;
+                        case "MB03" : resultSet = statement.executeQuery(query3);
+                        break;
+                        case "MB04" : resultSet = statement.executeQuery(query4);
+                        break;
+                        case "MB05" : resultSet = statement.executeQuery(query5);
+                        break;
                 }
+                while(resultSet.next()){
+                        String C2 = resultSet.getString("ANSWER.ANSWER");
+                        System.out.print(C2+"    ");
+                }
+                System.out.println(user_number);
+                
         }       
         //     ADMIN일 경우
         else if(userAuthor.equals("ADMIN")){
@@ -79,6 +91,7 @@ public void StaticsFunction(Statement statement){
                                 String C5 = resultSet.getString("ANSWER.ANSWER");
                                 System.out.print("    "+C5);
                         }
+                        System.out.println("");
 
                 } else if(a == 2){
                 System.out.println("       답(1) 답(2) 답(3) 답(4) 답(5)");
