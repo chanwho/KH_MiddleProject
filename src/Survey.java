@@ -4,7 +4,7 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class Survey {
-    public void SurveyFunction(Statement statement){
+    public void SurveyFunction(Statement statement, String user_number){
         String query_question1 = "select question.QUESTION from question where question.QUESTION_UID = 'QS01';";
         String query_answer1 = "select * from answer inner join question ON question.QUESTION_UID = ANSWER.question_uid where question.QUESTION_UID = 'QS01';";
         String query_question2 = "select question.QUESTION from question where question.QUESTION_UID = 'QS02';";
@@ -32,7 +32,7 @@ public class Survey {
                 System.out.println(answer);
             }
             String answer1 = sc.next();
-            String answerInsert1 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('MB01','QS01','AS0"+ answer1 +"');";
+            String answerInsert1 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS01','AS0"+ answer1 +"');";
             statement.execute(answerInsert1);
 
             // 2번
@@ -48,7 +48,7 @@ public class Survey {
                 System.out.println(answer);
             }
             String answer2 = sc.next();
-            String answerInsert2 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('MB01','QS02','AS0"+ answer2 +"');";
+            String answerInsert2 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS02','AS0"+ answer2 +"');";
             statement.execute(answerInsert2);
 
             // 3번
@@ -64,7 +64,7 @@ public class Survey {
                 System.out.println(answer);
             }
             String answer3 = sc.next();
-            String answerInsert3 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('MB01','QS03','AS0"+ answer3 +"');";
+            String answerInsert3 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS03','AS0"+ answer3 +"');";
             statement.execute(answerInsert3);
             // 4번
             resultSet = statement.executeQuery(query_question4);
@@ -79,7 +79,7 @@ public class Survey {
                 System.out.println(answer);
             }
             String answer4 = sc.next();
-            String answerInsert4 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('MB01','QS04','AS0"+ answer4 +"');";
+            String answerInsert4 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS04','AS0"+ answer4 +"');";
             statement.execute(answerInsert4);
             // 5번
             resultSet = statement.executeQuery(query_question5);
@@ -94,7 +94,7 @@ public class Survey {
                 System.out.println(answer);
             }
             String answer5 = sc.next();
-            String answerInsert5 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('MB01','QS05','AS0"+ answer5 +"');";
+            String answerInsert5 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS05','AS0"+ answer5 +"');";
             statement.execute(answerInsert5);
 
             System.out.println("설문 종료");
