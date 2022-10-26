@@ -25,7 +25,7 @@ public class Main{
                 // statics.StaticsFunction(statement);
     
                 // 종료화면
-    
+                return;
             }
         } catch (SQLException e) {
             e.printStackTrace();
