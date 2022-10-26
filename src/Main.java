@@ -8,6 +8,7 @@ public class Main{
         String url = "jdbc:mysql://localhost:3306/kh_middle";
         String user = "root";
         String password = "*khacademy!";
+        String USER_UID = "";
 
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
@@ -22,9 +23,9 @@ public class Main{
                 Survey survey = new Survey();
                 survey.SurveyFunction(statement, Main_user_number);
                 // break;
-                Statics statics = new Statics();
-                statics.StaticsFunction(statement);
-                return;
+                // Statics statics = new Statics();
+                // statics.StaticsFunction(statement);
+                // return;
                 // 종료화면
             // }
             } catch (SQLException e) {
