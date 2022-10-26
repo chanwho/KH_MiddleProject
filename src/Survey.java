@@ -1,11 +1,20 @@
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Survey {
     public void SurveyFunction(Statement statement){
+        String query = "select * from question_answer;";
+        ResultSet resultSet;
         try {
-            String query = "select * from question_answer;";
-            statement.execute(query);
-        } catch (Exception e) {
+            resultSet = statement.executeQuery(query);
+            while(resultSet.next()){
+                String 
+            }
+
+
+
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

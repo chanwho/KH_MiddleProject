@@ -10,7 +10,6 @@ public class Main{
         String user = "root";
         String password = "khacademy!";
 
-
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
             Statement statement = connection.createStatement();
