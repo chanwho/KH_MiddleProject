@@ -6,6 +6,7 @@ KH_MiddleProject
 - [화면정의서](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/%ED%99%94%EB%A9%B4%EC%A0%95%EC%9D%98%EC%84%9C_%EC%B0%AC%ED%95%B4%EC%9B%90_FINAL.pdf)
 - [요구사항 정의서](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%EC%A0%95%EC%9D%98%EC%84%9C_%EC%B0%AC%ED%95%B4%EC%9B%90_FINAL.pdf)
 - [ERD](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/ERD_FINAL.png)
+- [업무분담](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/%EC%97%85%EB%AC%B4%EB%B6%84%EB%8B%B4.pdf)
 - [PPT](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/%EC%9D%B4%EC%96%B4%ED%8F%B0%20%EB%A7%8C%EC%A1%B1%EB%8F%84%EC%A1%B0%EC%82%AC%20%EC%84%A4%EB%AC%B8%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20PPT.pdf)
 - [VIDEO](https://www.youtube.com/watch?v=AOW354hVFhY)
 - [FlowChart](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/flow_chart.PNG)
