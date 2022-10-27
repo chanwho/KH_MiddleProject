@@ -138,10 +138,7 @@ public class Survey {
             statement.execute(answerInsert5);
 
             System.out.println("--------------설문 종료--------------");
-<<<<<<< HEAD
-            
-=======
->>>>>>> 0e45f69471ffb22f3147b72136186415bbb0c462
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
