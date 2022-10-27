@@ -7,7 +7,7 @@ KH_MiddleProject
 - 로그인 : 김해인
 - 설문 : 이찬우
 - 통계 : 은원기
-- [PDF](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/%EC%97%85%EB%AC%B4%EB%B6%84%EB%8B%B4.pdf)
+- [PDF](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/%EC%97%85%EB%AC%B4%EB%B6%84%EB%8B%B4.PNG)
 
 ## REFERS
 - [화면정의서](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/%ED%99%94%EB%A9%B4%EC%A0%95%EC%9D%98%EC%84%9C_%EC%B0%AC%ED%95%B4%EC%9B%90_FINAL.pdf)
