@@ -1,6 +1,15 @@
-### KH_MiddleProject
-찬해원
+# 이어폰 만족도조사 설문 프로그램
+KH_MiddleProject  
+찬해원(이찬우 은원기 김해인)
 
+## REFERS
+- [화면정의서](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/%ED%99%94%EB%A9%B4%EC%A0%95%EC%9D%98%EC%84%9C_%EC%B0%AC%ED%95%B4%EC%9B%90_FINAL.pdf)
+- [요구사항 정의서](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%EC%A0%95%EC%9D%98%EC%84%9C_%EC%B0%AC%ED%95%B4%EC%9B%90_FINAL.pdf)
+- [ERD](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/ERD_FINAL.png)
+- [VIDEO](https://www.youtube.com/watch?v=AOW354hVFhY)
+
+
+## log
  - 22'10'21 팀명 정하기
 
 
