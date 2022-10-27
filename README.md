@@ -11,7 +11,7 @@ KH_MiddleProject
 - [VIDEO](https://www.youtube.com/watch?v=AOW354hVFhY)
 - [FlowChart](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/flow_chart.PNG)
 ![](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/flow_chart.PNG)
-
+![](https://github.com/chanwho/KH_MiddleProject/blob/main/REFERS/%EC%97%85%EB%AC%B4%EB%B6%84%EB%8B%B4.pdf)
 
 ## log
  - 22'10'21 팀명 정하기
