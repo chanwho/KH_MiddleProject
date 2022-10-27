@@ -21,5 +21,12 @@
  
  
  - 22'10'26 End.java, survey.java 작성완료. 추가 기능들을 위한 ERD를 새롭게 작성
+ login.java, statics.java 작성 후 Main에 병합 및 코드 정리.
+ 
+ 
+ - 22'10'27 Main.java의 전체적인 동작 최종확인, 화면정의서와 일치여부 최종확인, 
+ REFERs 폴더로 작업 파일들 정리, PPT 제작 및 발표, 화면녹화 및 Youtube Upload
+
+ 
  
  
