@@ -33,7 +33,9 @@ public class Survey {
                 String answer = resultSet.getString("answer");
                 System.out.println(answer);
             }
+            System.out.print("답 : ");
             String answer1 = sc.next();
+            System.out.println();
             String answerInsert1 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS01','AS0"+ answer1 +"');";
             statement.execute(answerInsert1);
 
@@ -55,7 +57,9 @@ public class Survey {
             prob2.add("AS06");
             prob2.add("AS07");
             prob2.add("AS08");
+            System.out.print("답 : ");
             String answer2 = sc.next();
+            System.out.println();
             int Prob2_index = Integer.parseInt(answer2)-1;
             String answerInsert2 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS02','"+ prob2.get(Prob2_index) +"');";
             statement.execute(answerInsert2);
@@ -72,7 +76,9 @@ public class Survey {
                 String answer = resultSet.getString("answer");
                 System.out.println(answer);
             }
+            System.out.print("답 : ");
             String answer3 = sc.next();
+            System.out.println();
             ArrayList<String> prob3 = new ArrayList<>();
             prob3.add("AS09");
             prob3.add("AS10");
@@ -94,7 +100,9 @@ public class Survey {
                 String answer = resultSet.getString("answer");
                 System.out.println(answer);
             }
+            System.out.print("답 : ");
             String answer4 = sc.next();
+            System.out.println();
             ArrayList<String> prob4 = new ArrayList<>();
             prob4.add("AS14");
             prob4.add("AS15");
@@ -116,7 +124,9 @@ public class Survey {
                 String answer = resultSet.getString("answer");
                 System.out.println(answer);
             }
+            System.out.print("답 : ");
             String answer5 = sc.next();
+            System.out.println();
             ArrayList<String> prob5 = new ArrayList<>();
             prob5.add("AS19");
             prob5.add("AS20");
@@ -128,7 +138,7 @@ public class Survey {
             statement.execute(answerInsert5);
 
             System.out.println("--------------설문 종료--------------");
-            sc.close();
+            
         } catch (SQLException e) {
             e.printStackTrace();
         }

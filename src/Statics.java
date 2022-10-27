@@ -9,9 +9,7 @@ public class Statics {
 public void StaticsFunction(Statement statement, String user_number){
         Scanner input = new Scanner(System.in);
         // 로그인한 사람의 USER_UID로 AUTHOR_UID 확인
-        String query = "SELECT USER.ID, AUTHOR.AUTHOR FROM AUTHOR INNER JOIN USER ON USER.AUTHOR_UID = AUTHOR.AUTHOR_UID AND USER.USER_UID = '"+user_number+"'";
-        // 설문자 최대 5명으로 제한
-        
+        String query = "SELECT USER.ID, AUTHOR.AUTHOR FROM AUTHOR INNER JOIN USER ON USER.AUTHOR_UID = AUTHOR.AUTHOR_UID AND USER.USER_UID = '"+user_number+"'";        
         String query1 = "SELECT ANSWER.ANSWER_UID, ANSWER.ANSWER FROM QUESTION_ANSWER RIGHT JOIN ANSWER ON QUESTION_ANSWER.ANSWER_UID = ANSWER.ANSWER_UID WHERE QUESTION_ANSWER.USER_UID = 'MB01'";
         String query2 = "SELECT ANSWER.ANSWER_UID, ANSWER.ANSWER FROM QUESTION_ANSWER RIGHT JOIN ANSWER ON QUESTION_ANSWER.ANSWER_UID = ANSWER.ANSWER_UID WHERE QUESTION_ANSWER.USER_UID = 'MB02'";
         String query3 = "SELECT ANSWER.ANSWER_UID, ANSWER.ANSWER FROM QUESTION_ANSWER RIGHT JOIN ANSWER ON QUESTION_ANSWER.ANSWER_UID = ANSWER.ANSWER_UID WHERE QUESTION_ANSWER.USER_UID = 'MB03'";
@@ -23,15 +21,15 @@ public void StaticsFunction(Statement statement, String user_number){
         String query9 = "SELECT QUESTION_ANSWER.QUESTION_UID, COUNT(QUESTION_ANSWER.ANSWER_UID), ANSWER.ANSWER_UID FROM QUESTION_ANSWER RIGHT JOIN ANSWER ON QUESTION_ANSWER.ANSWER_UID = ANSWER.ANSWER_UID WHERE ANSWER.ANSWER_UID between 'AS14' AND 'AS18' GROUP BY ANSWER_UID";
         String query10 = "SELECT QUESTION_ANSWER.QUESTION_UID, COUNT(QUESTION_ANSWER.ANSWER_UID), ANSWER.ANSWER_UID FROM QUESTION_ANSWER RIGHT JOIN ANSWER ON QUESTION_ANSWER.ANSWER_UID = ANSWER.ANSWER_UID WHERE ANSWER.ANSWER_UID between 'AS19' AND 'AS23' GROUP BY ANSWER_UID";
         ResultSet resultSet;
-        try {
+        
         String userAuthor= "";
         String id= "";
-        resultSet = statement.executeQuery(query);
-                
+        try {
+        resultSet = statement.executeQuery(query);              
         while(resultSet.next()){
         String ID = resultSet.getString("ID");
         String AUTHOR = resultSet.getString("AUTHOR");
-        if(AUTHOR.equals("GUEST")) userAuthor="GUEST";  // 전역변수에 넣어준다
+        if(AUTHOR.equals("GUEST")) userAuthor="GUEST";  // 전역변수(id, userAuthor)에 넣어준다
         else if(AUTHOR.equals("ADMIN")) userAuthor= "ADMIN";
         id = ID;
         }
@@ -39,7 +37,8 @@ public void StaticsFunction(Statement statement, String user_number){
         if(userAuthor.equals("GUEST")){
                 System.out.println(id+"회원님 통계조회 화면입니다.");
                 System.out.println("회원님이 참여하신 설문을 조회합니다.\n"+
-                "     질문(1)         질문(2)            질문(3)           질문(4)           질문(5)");
+                "    질문(1) 질문(2) 질문(3) 질문(4) 질문(5)");
+                // user_number에 따라 해당 query 선택
                 switch(user_number){
                         case "MB02" : resultSet = statement.executeQuery(query2);
                         break;
@@ -52,46 +51,45 @@ public void StaticsFunction(Statement statement, String user_number){
                 }
                 while(resultSet.next()){
                         String C2 = resultSet.getString("ANSWER.ANSWER");
-                        System.out.print(C2+"    ");
+                        System.out.print("       "+C2.substring(1, 2));
                 }
-                System.out.println(user_number);
-                
+                System.out.println();               
         }       
         //     ADMIN일 경우
         else if(userAuthor.equals("ADMIN")){
                 System.out.println(id+"회원님 \n 1. 설문자별 답변결과, 2.질문별 총답변수");
                 int a = Integer.parseInt(input.nextLine());
                 if(a == 1){
-                        System.out.println("                질문(1)         질문(2)            질문(3)           질문(4)           질문(5)");
+                        System.out.println("             질문(1) 질문(2) 질문(3) 질문(4) 질문(5)");
                         System.out.print("설문자(1)");
                         resultSet = statement.executeQuery(query1);
                         while(resultSet.next()){
                                 String C1 = resultSet.getString("ANSWER.ANSWER");
-                                System.out.print("    "+C1);
+                                System.out.print("       "+C1.substring(1, 2));
                         }
                         System.out.print("\n설문자(2)");
                         resultSet = statement.executeQuery(query2);
                         while(resultSet.next()){
                                 String C2 = resultSet.getString("ANSWER.ANSWER");
-                                System.out.print("    "+C2);
+                                System.out.print("       "+C2.substring(1, 2));
                         }
                         System.out.print("\n설문자(3)");
                         resultSet = statement.executeQuery(query3);
                         while(resultSet.next()){
                                 String C3 = resultSet.getString("ANSWER.ANSWER");
-                                System.out.print("    "+C3);
+                                System.out.print("       "+C3.substring(1, 2));
                         }
                         System.out.print("\n설문자(4)");
                         resultSet = statement.executeQuery(query4);
                         while(resultSet.next()){
                                 String C4 = resultSet.getString("ANSWER.ANSWER");
-                                System.out.print("    "+C4);
+                                System.out.print("       "+C4.substring(1, 2));
                         }
                         System.out.print("\n설문자(5)");
                         resultSet = statement.executeQuery(query5);
                         while(resultSet.next()){
                                 String C5 = resultSet.getString("ANSWER.ANSWER");
-                                System.out.print("    "+C5);
+                                System.out.print("       "+C5.substring(1, 2));
                         }
                         System.out.println("");
 
@@ -127,12 +125,11 @@ public void StaticsFunction(Statement statement, String user_number){
                         String C10 = resultSet.getString("COUNT(QUESTION_ANSWER.ANSWER_UID)");
                         System.out.print("    "+C10);
                 }
+                System.out.println();
         }
-        }
-        
+        }       
         } catch (SQLException e) {
                 e.printStackTrace();
         }
- 
         }
 }

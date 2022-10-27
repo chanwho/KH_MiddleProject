@@ -33,15 +33,15 @@ public class Main{
                     case "P" :
                     case "p" :
                     // 설문 호출
-                        // Survey survey = new Survey();
-                        // survey.SurveyFunction(statement, Main_user_number);
+                        Survey survey = new Survey();
+                        survey.SurveyFunction(statement, Main_user_number);
                         break;
 
                     case "S" :
                     case "s" :
                     // 통계 호출
-                        // Statics statics = new Statics();
-                        // statics.StaticsFunction(statement, Main_user_number);
+                        Statics statics = new Statics();
+                        statics.StaticsFunction(statement, Main_user_number);
                         break;
 
                     case "Q" :
