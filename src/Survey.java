@@ -128,7 +128,6 @@ public class Survey {
             statement.execute(answerInsert5);
 
             System.out.println("--------------설문 종료--------------");
-            sc.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
