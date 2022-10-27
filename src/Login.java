@@ -57,7 +57,7 @@ public class LogIn {
                 user_author = resultSet.getString("AUTHOR");
             }
             
-            System.out.println(user_id + "님 [" + user_author + "] 권한으로 로그인합니다.\n");
+            System.out.println(user_id + "님 [" + user_author + "] 권한으로 로그인합니다.");
 
         } catch (SQLException e) {
             e.printStackTrace();
