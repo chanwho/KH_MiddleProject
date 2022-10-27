@@ -1,6 +1,7 @@
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Survey {
@@ -48,8 +49,15 @@ public class Survey {
                 String answer = resultSet.getString("answer");
                 System.out.println(answer);
             }
+            ArrayList<String> prob2 = new ArrayList<>();
+            prob2.add("AS04");
+            prob2.add("AS05");
+            prob2.add("AS06");
+            prob2.add("AS07");
+            prob2.add("AS08");
             String answer2 = sc.next();
-            String answerInsert2 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS02','AS0"+ answer2 +"');";
+            int Prob2_index = Integer.parseInt(answer2)-1;
+            String answerInsert2 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS02','"+ prob2.get(Prob2_index) +"');";
             statement.execute(answerInsert2);
 
             // 3번
@@ -65,7 +73,14 @@ public class Survey {
                 System.out.println(answer);
             }
             String answer3 = sc.next();
-            String answerInsert3 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS03','AS0"+ answer3 +"');";
+            ArrayList<String> prob3 = new ArrayList<>();
+            prob3.add("AS09");
+            prob3.add("AS10");
+            prob3.add("AS11");
+            prob3.add("AS12");
+            prob3.add("AS13");
+            int Prob3_index = Integer.parseInt(answer3)-1;
+            String answerInsert3 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS03','"+ prob3.get(Prob3_index) +"');";
             statement.execute(answerInsert3);
             // 4번
             resultSet = statement.executeQuery(query_question4);
@@ -80,7 +95,14 @@ public class Survey {
                 System.out.println(answer);
             }
             String answer4 = sc.next();
-            String answerInsert4 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS04','AS0"+ answer4 +"');";
+            ArrayList<String> prob4 = new ArrayList<>();
+            prob4.add("AS14");
+            prob4.add("AS15");
+            prob4.add("AS16");
+            prob4.add("AS17");
+            prob4.add("AS18");
+            int Prob4_index = Integer.parseInt(answer4)-1;
+            String answerInsert4 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS04','"+ prob4.get(Prob4_index) +"');";
             statement.execute(answerInsert4);
             // 5번
             resultSet = statement.executeQuery(query_question5);
@@ -95,13 +117,18 @@ public class Survey {
                 System.out.println(answer);
             }
             String answer5 = sc.next();
-            String answerInsert5 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS05','AS0"+ answer5 +"');";
+            ArrayList<String> prob5 = new ArrayList<>();
+            prob5.add("AS19");
+            prob5.add("AS20");
+            prob5.add("AS21");
+            prob5.add("AS22");
+            prob5.add("AS23");
+            int Prob5_index = Integer.parseInt(answer5)-1;
+            String answerInsert5 = "insert into question_answer(user_uid, question_uid, answer_uid) value ('"+ user_number +"','QS05','"+ prob5.get(Prob5_index) +"');";
             statement.execute(answerInsert5);
 
             System.out.println("--------------설문 종료--------------");
-            Start start = new Start();
-            start.startFunction();
-
+            sc.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
